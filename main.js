@@ -36,7 +36,27 @@ const getHardestHomework = function(homeworks) {
     return hardestHw
 }
 // CREATE PHONEBOOK
-const createPhonebook = function()
+const createPhonebook = function(names , numbers) {
+    //if names & numbers are empty 
+    if(names.length === 0 && numbers.length === 0) {
+        //return empty phonebook
+        return {};
+    }
+        
+    //set empt phonebook to add info
+    let phonebook = {};
+    //iterate both arrays
+    for(let i = 0 ; i < names.length ; i++) {
+        //iterate through both arrays
+        let firstName = names[i]
+        let nums = numbers[i] ;
+        //assign/add pairs to phonebook
+        phonebook[firstName] = nums;
+    }
+        
+    //return phonebook
+    return phonebook
+}
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
 // └─────────────────────────────────────┘
